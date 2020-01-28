@@ -1,0 +1,1 @@
+export const UPDATE_ID_RULE_BASE = 'UPDATE_ID_RULE_BASE'
