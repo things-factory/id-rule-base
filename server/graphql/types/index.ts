@@ -1,5 +1,7 @@
 import { Filter, Pagination, Sorting, ObjectRef } from '@things-factory/shell'
-// import * as CommonCode from './common-code'
+import { IdRule } from './id-rule'
+import { IdRulePatch } from './id-rule-patch'
+import { NewIdRule } from './new-id-rule'
 // import * as CommonCodeDetail from './common-code-detail'
 
 // export const queries = [
@@ -17,8 +19,19 @@ import { Filter, Pagination, Sorting, ObjectRef } from '@things-factory/shell'
 //   ...CommonCodeDetail.Types
 // ]
 
-export const queries = []
+export const queries = [`idRule(type: String!): IdRule`]
 
-export const mutations = []
+export const mutations = [
+  `
+  createIdRule (
+    idRule: NewIdRule!
+  ): IdRule
 
-export const types = [Filter, Pagination, Sorting, ObjectRef]
+  updateIdRule (
+    type: String!
+    patch: IdRulePatch
+  ): IdRule
+  `
+]
+
+export const types = [Filter, Pagination, Sorting, ObjectRef, IdRule, IdRulePatch, NewIdRule]

@@ -9,7 +9,7 @@ export enum IdRuleType {
 }
 
 @Entity('id-rules')
-@Index('ix_id_rule_0', (idRule: IdRule) => [idRule.domain, idRule.type, idRule.rule], { unique: true })
+@Index('ix_id_rule_0', (idRule: IdRule) => [idRule.domain, idRule.type], { unique: true })
 @Index('ix_id_rule_1', (idRule: IdRule) => [idRule.domain])
 @Index('ix_id_rule_2', (idRule: IdRule) => [idRule.type])
 export class IdRule {

@@ -24,10 +24,8 @@ process.on('bootstrap-module-route' as any, (app, routes) => {
    * ex) routes.get('/path', async(context, next) => {})
    * ex) routes.post('/path', async(context, next) => {})
    */
-  routes.get('/get-next-pattern/:type', async (context, next) => {
-    const { type } = context.params
-
-    const domain = '73038de0-7d86-44b3-91ee-9bd9ca368d08'
+  routes.get('/get-next-pattern/:type/:domain', async (context, next) => {
+    const { type, domain } = context.params
 
     var id = await generateId({
       domain,

@@ -33,7 +33,7 @@
     "@things-factory/shell": "*"
   },
   "devDependencies": {
-    "@things-factory/board-app": "^2.0.3",
-    "@things-factory/board-test": "^2.0.0"
+    "@things-factory/opa-app": "^2.0.0",
+    "@things-factory/opa-test": "^2.0.0"
   }
 }
