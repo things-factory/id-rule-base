@@ -30,7 +30,10 @@ process.on('bootstrap-module-route' as any, (app, routes) => {
     var id = await generateId({
       domain,
       type,
-      seed: {}
+      seed: {
+        productId: 'ASUS',
+        receiver: 'LA'
+      }
     })
 
     context.status = 200

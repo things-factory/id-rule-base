@@ -36,11 +36,36 @@ export class GristCodeInputPopup extends LitElement {
         justify-content: inherit;
       }
 
+      :host * {
+        box-sizing: border-box;
+      }
+
       #wrapper {
         flex: 1;
         width: 100%;
         display: flex;
         flex-direction: column;
+        padding: 5px;
+      }
+
+      #wrapper > h4 {
+        margin: 0;
+      }
+
+      #wrapper > ul {
+        width: 100%;
+      }
+
+      #wrapper > ul > li {
+        display: flex;
+      }
+      #wrapper > ul > li > span {
+        font-weight: bold;
+        flex-basis: 200px;
+      }
+
+      #wrapper > ul > li > i18n-msg {
+        flex: 1;
       }
 
       editor-code {
@@ -68,10 +93,15 @@ export class GristCodeInputPopup extends LitElement {
   render() {
     return html`
       <div id="wrapper">
+        <h4><i18n-msg msgid="label.arguments"></i18n-msg></h4>
+        <ul>
+          <li><span>domain</span><i18n-msg msgid="label.argument domain description"></i18n-msg></li>
+          <li><span>seed</span><i18n-msg msgid="label.argument seed description"></i18n-msg></li>
+        </ul>
         <editor-code id="rule-editor" type="text" .value=${(this._idRule || {}).rule}></editor-code>
         <div id="footer">
           <mwc-button
-            label=${i18next.t('label.save')}
+            label=${i18next.t('button.save')}
             @click=${e => {
               this.updateIdRule()
             }}

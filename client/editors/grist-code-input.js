@@ -106,6 +106,9 @@ export class GristCodeInput extends InputEditor {
               }}
             ></grist-code-input-popup>
           `,
+          options: {
+            title: i18next.t('title.ID Rule Editor')
+          },
           callback: popup => {
             this.popup = popup
           }
