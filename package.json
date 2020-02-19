@@ -1,6 +1,6 @@
 {
   "name": "@things-factory/id-rule-base",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "dist-server/index.js",
   "browser": "client/index.js",
   "things-factory": true,
@@ -30,7 +30,7 @@
     "stop": "things-factory-stop id-rule-base"
   },
   "dependencies": {
-    "@things-factory/board-ui": "^0.9.22",
+    "@things-factory/grist-ui": "^2.0.0",
     "@things-factory/i18n-base": "^2.0.0",
     "@things-factory/setting-base": "^2.0.0",
     "@things-factory/shell": "^2.0.0",
