@@ -1,6 +1,6 @@
 {
   "name": "@things-factory/id-rule-base",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "dist-server/index.js",
   "browser": "client/index.js",
   "things-factory": true,
@@ -31,10 +31,10 @@
   },
   "dependencies": {
     "@things-factory/board-ui": "^0.9.22",
-    "@things-factory/grist-ui": "^2.0.0",
     "@things-factory/i18n-base": "^2.0.0",
     "@things-factory/setting-base": "^2.0.0",
-    "@things-factory/shell": "^2.0.0"
+    "@things-factory/shell": "^2.0.0",
+    "codemirror": "^5.48.0"
   },
   "devDependencies": {
     "@things-factory/opa-app": "^2.0.0",
