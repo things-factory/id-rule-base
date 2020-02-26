@@ -1,6 +1,3 @@
-// import { store } from '@things-factory/shell'
-// import idRuleBase from './reducers/main'
-
 import { registerEditor, registerRenderer } from '@things-factory/grist-ui'
 import { GristCodeInput } from './editors/grist-code-input'
 import { IdRuleRenderer } from './editors/id-rule-renderer'
