@@ -5,7 +5,11 @@ const ORMCONFIG = config.get('ormconfig', {})
 const DATABASE_TYPE = ORMCONFIG.type
 
 export enum IdRuleType {
-  PALLET_ID = 'pallet_id'
+  PALLET_ID = 'pallet_id',
+  DO_NUMBER = 'do_number',
+  GAN_NUMBER = 'gan_number',
+  GRN_NUMBER = 'grn_number',
+  RO_NUMBER = 'ro_number'
 }
 
 @Entity('id-rules')
